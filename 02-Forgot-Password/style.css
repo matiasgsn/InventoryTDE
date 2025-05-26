@@ -1,0 +1,70 @@
+#inputEmail, #inputPassword{
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 7px 16px;
+    gap: 10px;
+
+    height: 55px;
+}
+
+.header-4-bold{
+    font-family: 'Lexend';
+    font-style: bold;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.body-1-regular{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.body-2-regular{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: right;
+}
+
+.primary-500-border{
+    border: 1px solid #006EC4;
+    border-radius: 10px;    
+}
+
+.primary-500-text{
+    color:#006EC4;
+}
+
+.dark-500{
+    color: #16151C;
+}
+
+.gray-500{
+    color: #A2A1A8;
+}
+
+#inputCheckbox{
+    width: 24px;
+    height: 24px;
+
+    border-radius: 4px;
+}
+
+.label-regular {
+    /* Label Regular */
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 16px;
+}
+
