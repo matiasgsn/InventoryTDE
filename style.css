@@ -18,6 +18,14 @@
     line-height: 40px;
 }
 
+.header-5-bold{
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+}
+
 .body-1-regular{
     font-family: 'Lexend';
     font-style: normal;
@@ -59,11 +67,25 @@
     border-radius: 4px;
 }
 
-.label-regular {
+.label-regular{
     font-family: 'Lexend';
     font-style: normal;
     font-weight: 300;
     font-size: 11px;
     line-height: 16px;
 }
+
+.otp-box{
+    width: 60px; 
+    height: 60px;
+
+    & input[type=number] {
+        -webkit-appearance: textfield;
+        -moz-appearance:    textfield;
+        appearance:         textfield;
+    }
+}
+
+
+
 
