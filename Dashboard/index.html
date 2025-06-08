@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1440, initial-scale=1.0" />
+  <title>Inventory - Dashboard</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app d-flex mx-auto" style="max-width: 1440px;">
+    <!-- Sidebar -->
+        <aside class="sidebar d-flex flex-column m-3 rounded-4" style="max-width: 232px;">
+        </aside>
+
+        <aside class="sidebar sidebar-bg d-flex flex-column m-3 rounded-4 position-fixed" style="max-width: 232px;">
+        <div class="logo-section d-flex align-items-center justify-content-center mt-5 ms-3">
+            <img src="/Sidebar/Logo.svg" alt="Inventory Logo" class="logo me-2">
+            <h6 class="brand-title mb-0">Inventory</h6>
+        </div>
+        <nav class="nav flex-column mt-4 px-4">
+            <a class="nav-link active" href="#">
+            <img src="/Sidebar/Dashboard.svg" alt="Dashboard Icon" class="dark-500 me-3"> Dashboard
+            </a>
+            <a class="nav-link" href="#">
+            <img src="/Sidebar/Items.svg" alt="Items Icon" class="dark-500 me-3"> Items
+            </a>
+            <a class="nav-link" href="#">
+            <img src="/Sidebar/Tools.svg" alt="Tools Icon" class="dark-500 me-3"> Tools
+            </a>
+            <a class="nav-link" href="#">
+            <img src="/Sidebar/Assets.svg" alt="Assets Icon" class="dark-500 me-3"> Assets
+            </a>
+            <a class="nav-link" href="#">
+            <img src="/Sidebar/Project.svg" alt="Project Icon" class="dark-500 me-3"> Project
+            </a>
+            <a class="nav-link" href="#">
+            <img src="/Sidebar/Requested & Returned.svg" alt="Requested & Returned Icon" class="dark-500 me-3"> Requested & Returned
+            </a>
+            <a class="nav-link" href="#">
+            <img src="/Sidebar/On hand.svg" alt="On Hand Icon" class="dark-500 me-3"> On hand
+            </a>
+            <a class="nav-link" href="#">
+            <img src="/Sidebar/GRN Report.svg" alt="GRN Report Icon" class="dark-500 me-3"> GRN Report
+            </a>
+        </nav>
+        <div class="flex-grow-1"></div>
+        <div class="theme-toggle d-flex justify-content-center align-items-center mt-auto mb-4 px-3">
+            <button class="btn body-1-regular white-500 theme-btn-light d-flex justify-content-around w-50 py-3">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1V2M11 20V21M18.0711 3.92894L17.364 4.63605M4.63605 17.364L3.92894 18.0711M21 11H20M2 11H1M18.071 18.0711L17.3639 17.364M4.63605 4.63605L3.92894 3.92894M17 11C17 14.3137 14.3137 17 11 17C7.68629 17 5 14.3137 5 11C5 7.68629 7.68629 5 11 5C14.3137 5 17 7.68629 17 11Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg> Light
+            </button>
+            <button class="btn body-1-regular dark-500 theme-btn-dark d-flex justify-content-around w-50 py-3">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.67163 12.8687C8.751 12.8687 12.8687 8.751 12.8687 3.67163C12.8687 2.74246 12.7309 1.84548 12.4746 1C16.251 2.14461 19 5.65276 19 9.80298C19 14.8824 14.8824 19 9.80298 19C5.65276 19 2.14461 16.251 1 12.4746C1.84548 12.7309 2.74246 12.8687 3.67163 12.8687Z" stroke="#16151C" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg> Dark
+            </button>
+        </div>
+        </aside>
+
+    <!-- Área principal -->
+    <div class="content d-flex flex-column w-100">
+      <!--Navbar-->
+          <nav class="nav-content d-flex justify-content-between align-items-start p-4 mb-1 w-100">
+              <div class="d-flex flex-column">
+                  <!--Título da Navbar-->
+                   <p class="nav-title header-6-bold dark-500 mb-0">Hello Mathias 👋🏻</p>
+                   <!--Subtítulo da Navbar-->
+                   <p class="nav-subtitle body-2-regular gray-500 mb-0">Good Morning</p>
+              </div>
+              <!--Pesquisa, notificação e perfil-->
+              <div class="d-flex align-items-center">
+                      <img src="/Navbar/search.svg" alt="">
+                      <input type="text" class="search-input form-control border border-0 me-3 ms-2" placeholder="Search">
+                      <button class="btn noti-btn">
+                          <img src="/Navbar/notification.svg" alt="">
+                      </button>
+                      <div class="my-profile user-box d-flex flex-row align-items-center w-100 h-100 p-2">
+                          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="user-img rounded-2 me-2">
+                          <div class="me-2">
+                          <span class="fw-semibold">Mathias W.</span><br>
+                          <small class="text-muted">Store Manager</small>
+                          </div>
+                          <button class="btn btn-sm ms-2">
+                              <img src="/Navbar/down-arrow.svg" alt="">
+                          </button>
+                      </div>
+              </div>
+          </nav>
+
+      <!--Conteúdo da página-->    
+      <main class="main-content flex-fill p-4 w-100">
+        <!--Conteúdo vai aqui-->
+
+        <!-- Linha 1-->
+        <div class="d-flex flex-row flex-nowrap w-100 gap-3">
+            
+            <!-- Item List-->
+            <div class="d-flex flex-column w-50 gray-border-20p pt-4" style="max-height: 500px;">
+                <div class="d-flex justify-content-between px-5 mb-3">
+                    <p class="header-6-bold dark-500">Item List</p>
+                    <a href="" class="d-flex align-items-end"><span class="body-1-regular-primary-500 align-bottom">View All</span></a>
+                </div>
+                <hr class="mx-5">
+
+                <!-- Tabela -->
+                <link rel="stylesheet" href="/Table/style.css">
+                <form class="d-flex justify-content-center p-5 py-1">
+                    <table class="table" style="max-width: 1236px;">
+                        <thead class="table-body-small-bold thead-bg">
+                            <tr class="table-header">
+                                <th class="py-3 greyscale-600 text-start" scope="col" style="max-width: 12%;">
+                                    <div class="d-flex flex-row justify-content-evenly align-items-center">
+                                        <span class="flex-fill text-wrap">Item Name</span>
+                                        <svg width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.46055 0.320327C3.75848 0.026688 4.24152 0.026688 4.53945 0.320327L7.27503 3.01651C7.75562 3.49019 7.41524 4.3001 6.73558 4.3001H1.26442C0.584758 4.3001 0.244379 3.49019 0.724976 3.01651L3.46055 0.320327Z" fill="#CBD5E0"/>
+                                            <path d="M3.46055 9.67987C3.75848 9.97351 4.24152 9.97351 4.53945 9.67987L7.27503 6.98369C7.75562 6.51001 7.41524 5.7001 6.73558 5.7001H1.26442C0.584758 5.7001 0.244379 6.51001 0.724976 6.98369L3.46055 9.67987Z" fill="#CBD5E0"/>
+                                            </svg>
+                                    </div>
+                                        
+                                </th>
+                                <th class="py-3 greyscale-600 text-start" scope="col" style="max-width: 10%">Image</th>
+
+                                
+                                <th class="py-3 greyscale-600 text-start" scope="col" style="max-width: 11%">Store</th>
+                                <th class="py-3 greyscale-600 text-start" scope="col" style="max-width: 11%">Ammount</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body-small-medium" style="border-color: transparent;">
+                            <tr class="table-row">
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 12%;">
+                                    Gas Kitting
+                                </td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">
+                                    <img style="max-width: 57px; max-height: 57px;" src="/Table/images/placeholder.png" alt="">
+                                </td>
+                                
+                                
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">22 Store House</td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">1 pcs</td>
+                            </tr>
+
+                            <tr class="table-row">
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 12%;">
+                                    Gas Kitting
+                                </td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">
+                                    <img style="max-width: 57px; max-height: 57px;" src="/Table/images/placeholder.png" alt="">
+                                </td>
+                                
+                                
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">22 Store House</td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">1 pcs</td>
+                            </tr>
+
+                            <tr class="table-row">
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 12%;">
+                                    Gas Kitting
+                                </td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">
+                                    <img style="max-width: 57px; max-height: 57px;" src="/Table/images/placeholder.png" alt="">
+                                </td>
+                                
+                                
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">22 Store House</td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">1 pcs</td>
+                            </tr>
+
+                            <tr class="table-row">
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 12%;">
+                                    Gas Kitting
+                                </td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">
+                                    <img style="max-width: 57px; max-height: 57px;" src="/Table/images/placeholder.png" alt="">
+                                </td>
+                                
+                                
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">22 Store House</td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">1 pcs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            
+            <!-- Asset List-->
+            <div class="d-flex flex-column w-50 gray-border-20p pt-4" style="max-height: 500px;">
+                <div class="d-flex justify-content-between px-5 mb-3">
+                    <p class="header-6-bold dark-500">Asset List</p>
+                    <a href="" class="d-flex align-items-end"><span class="body-1-regular-primary-500 align-bottom">View All</span></a>
+                </div>
+                <hr class="mx-5">
+
+                <!-- Tabela -->
+                <link rel="stylesheet" href="/Table/style.css">
+                <form class="d-flex justify-content-center p-5 py-1">
+                    <table class="table" style="max-width: 1236px;">
+                        <thead class="table-body-small-bold thead-bg">
+                            <tr class="table-header">
+                                <th class="py-3 greyscale-600 text-start" scope="col" style="max-width: 12%;">
+                                    <div class="d-flex flex-row justify-content-evenly align-items-center">
+                                        <span class="flex-fill text-wrap">Item Name</span>
+                                        <svg width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.46055 0.320327C3.75848 0.026688 4.24152 0.026688 4.53945 0.320327L7.27503 3.01651C7.75562 3.49019 7.41524 4.3001 6.73558 4.3001H1.26442C0.584758 4.3001 0.244379 3.49019 0.724976 3.01651L3.46055 0.320327Z" fill="#CBD5E0"/>
+                                            <path d="M3.46055 9.67987C3.75848 9.97351 4.24152 9.97351 4.53945 9.67987L7.27503 6.98369C7.75562 6.51001 7.41524 5.7001 6.73558 5.7001H1.26442C0.584758 5.7001 0.244379 6.51001 0.724976 6.98369L3.46055 9.67987Z" fill="#CBD5E0"/>
+                                            </svg>
+                                    </div>
+                                        
+                                </th>
+                                <th class="py-3 greyscale-600 text-start" scope="col" style="max-width: 10%">Image</th>
+
+                                
+                                <th class="py-3 greyscale-600 text-start" scope="col" style="max-width: 11%">Store</th>
+                                <th class="py-3 greyscale-600 text-start" scope="col" style="max-width: 11%">Ammount</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body-small-medium" style="border-color: transparent;">
+                            <tr class="table-row">
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 12%;">
+                                    Gas Kitting
+                                </td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">
+                                    <img style="max-width: 57px; max-height: 57px;" src="/Table/images/placeholder.png" alt="">
+                                </td>
+                                
+                                
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">22 Store House</td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">1 pcs</td>
+                            </tr>
+
+                            <tr class="table-row">
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 12%;">
+                                    Gas Kitting
+                                </td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">
+                                    <img style="max-width: 57px; max-height: 57px;" src="/Table/images/placeholder.png" alt="">
+                                </td>
+                                
+                                
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">22 Store House</td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">1 pcs</td>
+                            </tr>
+
+                            <tr class="table-row">
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 12%;">
+                                    Gas Kitting
+                                </td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">
+                                    <img style="max-width: 57px; max-height: 57px;" src="/Table/images/placeholder.png" alt="">
+                                </td>
+                                
+                                
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">22 Store House</td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">1 pcs</td>
+                            </tr>
+
+                            <tr class="table-row">
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 12%;">
+                                    Gas Kitting
+                                </td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">
+                                    <img style="max-width: 57px; max-height: 57px;" src="/Table/images/placeholder.png" alt="">
+                                </td>
+                                
+                                
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">22 Store House</td>
+                                <td class="py-2 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">1 pcs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+        <!-- Linha 2 -->
+        <div class="d-flex flex-row flex-nowrap w-100 gap-5">
+            <div class="d-flex flex-column w-50 mt-5">
+                <p class="sub-heading-medium gray-800">Item Summary</p>
+                <div class="d-flex flex-row gap-1">
+                    <div class="d-flex flex-column align-items-center w-50 ms-5 p-2">
+                        <img src="images/Quantity.svg" style="max-width: 50px; max-height: 50px;" class="pb-2" alt="">
+                        <span class="body-1-semibold gray-600">868</span>
+                        <span class="body-2-medium" style="color: #444444;">Quantity in Hand</span>
+                        
+                    </div>
+                    <div class="d-flex flex-column align-items-center w-50 me-5 p-2">
+                        <img src="images/On the way.svg" style="max-width: 50px; max-height: 50px;" class="pb-2" alt="">
+                        <span class="body-1-semibold gray-600">200</span>
+                        <span class="body-2-medium" style="color: #444444;">To be received</span>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column w-50 mt-5">
+                <p class="sub-heading-medium gray-800">Product Summary</p>
+                <div class="d-flex flex-row gap-5">
+                    <div class="d-flex flex-column align-items-center w-50 ms-5 p-2">
+                        <img src="images/Suppliers.svg" style="max-width: 50px; max-height: 50px;" class="pb-2" alt="">
+                        <span class="body-1-semibold gray-600">31</span>
+                        <span class="body-2-medium" style="color: #444444;">Number of Suppliers</span>
+                        
+                    </div>
+                    <div class="d-flex flex-column align-items-center w-50 me-5 p-2">
+                        <img src="images/Categories.svg" style="max-width: 50px; max-height: 50px;" class="pb-2" alt="">
+                        <span class="body-1-semibold gray-600">21</span>
+                        <span class="body-2-medium" style="color: #444444;">Number of Categories</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Linha 3 -->
+        <div class="d-flex flex-row flex-nowrap w-100 gap-5 pb-5 mb-5">
+            <div class="d-flex flex-column w-50 mt-5">
+                <p class="sub-heading-medium gray-800">Total Items</p>
+                <div class="d-flex flex-row gap-1">
+                    <div class="d-flex flex-column align-items-center w-50 ms-5 p-2">
+                        <img src="images/Suppliers.svg" style="max-width: 50px; max-height: 50px;" class="pb-2" alt="">
+                        <span class="body-1-semibold gray-600">31</span>
+                        <span class="body-2-medium" style="color: #444444;">Quantity in Hand</span>
+                        
+                    </div>
+                    <div class="d-flex flex-column align-items-center w-50 me-5 p-2">
+                        <img src="images/Categories.svg" style="max-width: 50px; max-height: 50px;" class="pb-2" alt="">
+                        <span class="body-1-semibold gray-600">21</span>
+                        <span class="body-2-medium" style="color: #444444;">To be received</span>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column w-50 mt-5">
+                <p class="sub-heading-medium gray-800">Total Assets</p>
+                <div class="d-flex flex-row gap-5">
+                    <div class="d-flex flex-column align-items-center w-50 ms-5 p-2">
+                        <img src="images/Suppliers.svg" style="max-width: 50px; max-height: 50px;" class="pb-2" alt="">
+                        <span class="body-1-semibold gray-600">31</span>
+                        <span class="body-2-medium" style="color: #444444;">Number of Suppliers</span>
+                        
+                    </div>
+                    <div class="d-flex flex-column align-items-center w-50 me-5 p-2">
+                        <img src="images/Categories.svg" style="max-width: 50px; max-height: 50px;" class="pb-2" alt="">
+                        <span class="body-1-semibold gray-600">21</span>
+                        <span class="body-2-medium" style="color: #444444;">Number of Categories</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+</body>
+</html>
