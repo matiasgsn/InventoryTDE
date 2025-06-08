@@ -1,114 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1440, initial-scale=1.0" />
   <title>Inventory - On Use</title>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
   <div class="app d-flex mx-auto" style="max-width: 1440px;">
     <!-- Sidebar -->
-        <aside class="sidebar d-flex flex-column m-3 rounded-4">
-        <div class="logo-section d-flex align-items-center justify-content-center mt-5 ms-3">
-            <img src="../Sidebar/Logo.svg" alt="Inventory Logo" class="logo me-2">
-            <h6 class="brand-title mb-0">Inventory</h6>
-        </div>
-        <nav class="nav flex-column mt-4 px-4">
-            <a class="nav-link active" href="#">
-            <img src="../Sidebar/Dashboard.svg" alt="Dashboard Icon" class="dark-500 me-3"> Dashboard
-            </a>
-            <a class="nav-link" href="#">
-            <img src="../Sidebar/Items.svg" alt="Items Icon" class="dark-500 me-3"> Items
-            </a>
-            <a class="nav-link" href="#">
-            <img src="../Sidebar/Tools.svg" alt="Tools Icon" class="dark-500 me-3"> Tools
-            </a>
-            <a class="nav-link" href="#">
-            <img src="../Sidebar/Assets.svg" alt="Assets Icon" class="dark-500 me-3"> Assets
-            </a>
-            <a class="nav-link" href="#">
-            <img src="../Sidebar/Project.svg" alt="Project Icon" class="dark-500 me-3"> Project
-            </a>
-            <a class="nav-link" href="#">
-            <img src="../Sidebar/Requested & Returned.svg" alt="Requested & Returned Icon" class="dark-500 me-3"> Requested & Returned
-            </a>
-            <a class="nav-link" href="#">
-            <img src="../Sidebar/On hand.svg" alt="On Hand Icon" class="dark-500 me-3"> On hand
-            </a>
-            <a class="nav-link" href="#">
-            <img src="../Sidebar/GRN Report.svg" alt="GRN Report Icon" class="dark-500 me-3"> GRN Report
-            </a>
-        </nav>
-        <div class="theme-toggle d-flex justify-content-center align-items-center mt-auto mb-4 px-3">
-            <button class="btn body-1-regular white-500 theme-btn-light d-flex justify-content-around w-50 py-3">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11 1V2M11 20V21M18.0711 3.92894L17.364 4.63605M4.63605 17.364L3.92894 18.0711M21 11H20M2 11H1M18.071 18.0711L17.3639 17.364M4.63605 4.63605L3.92894 3.92894M17 11C17 14.3137 14.3137 17 11 17C7.68629 17 5 14.3137 5 11C5 7.68629 7.68629 5 11 5C14.3137 5 17 7.68629 17 11Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
-            </svg> Light
-            </button>
-            <button class="btn body-1-regular dark-500 theme-btn-dark d-flex justify-content-around w-50 py-3">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.67163 12.8687C8.751 12.8687 12.8687 8.751 12.8687 3.67163C12.8687 2.74246 12.7309 1.84548 12.4746 1C16.251 2.14461 19 5.65276 19 9.80298C19 14.8824 14.8824 19 9.80298 19C5.65276 19 2.14461 16.251 1 12.4746C1.84548 12.7309 2.74246 12.8687 3.67163 12.8687Z" stroke="#16151C" stroke-width="1.5" stroke-linejoin="round"/>
-            </svg> Dark
-            </button>
-        </div>
-        </aside>
+    <aside class="sidebar d-flex flex-column m-3 rounded-4">
+      <div class="logo-section d-flex align-items-center justify-content-center mt-5 ms-3">
+        <img src="./Sidebar/logo.svg" alt="Inventory Logo" class="logo me-2">
+        <h6 class="brand-title mb-0">Inventory</h6>
+      </div>
+      <nav class="nav flex-column mt-4 px-4">
+        <a class="nav-link active" href="#">
+          <img src="./Sidebar/dashboard.svg" alt="Dashboard Icon" class="dark-500 me-3"> Dashboard
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./Sidebar/items.svg" alt="Items Icon" class="dark-500 me-3"> Items
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./Sidebar/tools.svg" alt="Tools Icon" class="dark-500 me-3"> Tools
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./Sidebar/assets.svg" alt="Assets Icon" class="dark-500 me-3"> Assets
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./Sidebar/project.svg" alt="Project Icon" class="dark-500 me-3"> Project
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./Sidebar/requested.svg" alt="Requested & Returned Icon" class="dark-500 me-3"> Requested & Returned
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./Sidebar/onhand.svg" alt="On Hand Icon" class="dark-500 me-3"> On hand
+        </a>
+        <a class="nav-link" href="#">
+          <img src="./Sidebar/grnreport.svg" alt="GRN Report Icon" class="dark-500 me-3"> GRN Report
+        </a>
+      </nav>
+      <div class="theme-toggle d-flex justify-content-center align-items-center mt-auto mb-4 px-3">
+        <button class="btn body-1-regular white-500 theme-btn-light d-flex justify-content-around w-50 py-3">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11 1V2M11 20V21M18.0711 3.92894L17.364 4.63605M4.63605 17.364L3.92894 18.0711M21 11H20M2 11H1M18.071 18.0711L17.3639 17.364M4.63605 4.63605L3.92894 3.92894M17 11C17 14.3137 14.3137 17 11 17C7.68629 17 5 14.3137 5 11C5 7.68629 7.68629 5 11 5C14.3137 5 17 7.68629 17 11Z"
+              stroke="white" stroke-width="1.5" stroke-linecap="round" />
+          </svg> Light
+        </button>
+        <button class="btn body-1-regular dark-500 theme-btn-dark d-flex justify-content-around w-50 py-3">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M3.67163 12.8687C8.751 12.8687 12.8687 8.751 12.8687 3.67163C12.8687 2.74246 12.7309 1.84548 12.4746 1C16.251 2.14461 19 5.65276 19 9.80298C19 14.8824 14.8824 19 9.80298 19C5.65276 19 2.14461 16.251 1 12.4746C1.84548 12.7309 2.74246 12.8687 3.67163 12.8687Z"
+              stroke="#16151C" stroke-width="1.5" stroke-linejoin="round" />
+          </svg> Dark
+        </button>
+      </div>
+    </aside>
 
-    <!-- Área principal -->
     <div class="content d-flex flex-column w-100">
       <!--Navbar-->
-          <nav class="nav-content d-flex justify-content-between align-items-start p-4 mb-1 w-100">
-              <div class="d-flex flex-column">
-                  <!--Título da Navbar-->
-                   <p class="nav-title header-6-bold dark-500 mb-0">Hello Mathias 👋🏻</p>
-                   <!--Subtítulo da Navbar-->
-                   <p class="nav-subtitle body-2-regular gray-500 mb-0">Good Morning</p>
-              </div>
-              <!--Pesquisa, notificação e perfil-->
-              <div class="d-flex align-items-center">
-                      <img src="../Navbar/search.svg" alt="">
-                      <input type="text" class="search-input form-control border border-0 me-3 ms-2" placeholder="Search">
-                      <button class="btn noti-btn">
-                          <img src="../Navbar/notification.svg" alt="">
-                      </button>
-                      <div class="my-profile user-box d-flex flex-row align-items-center w-100 h-100 p-2">
-                          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="user-img rounded-2 me-2">
-                          <div class="me-2">
-                          <span class="fw-semibold">Mathias W.</span><br>
-                          <small class="text-muted">Store Manager</small>
-                          </div>
-                          <button class="btn btn-sm ms-2">
-                              <img src="../Navbar/down-arrow.svg" alt="">
-                          </button>
-                      </div>
-              </div>
-          </nav>
+      <nav class="nav-content d-flex justify-content-between align-items-start p-4 mb-1 w-100">
+        <div class="d-flex flex-column">
+          <p class="nav-title header-6-bold dark-500 mb-0">Hello Mathias 👋🏻</p>
+          <p class="nav-subtitle body-2-regular gray-500 mb-0">Good Morning</p>
+        </div>
+        <!--Pesquisa, notificação e perfil-->
+        <div class="d-flex align-items-center">
+          <img src="./Navbar/search.svg" alt="">
+          <input type="text" class="search-input form-control border border-0 me-3 ms-2" placeholder="Search">
+          <button class="btn noti-btn">
+            <img src="./Navbar/notification.svg" alt="">
+          </button>
+          <div class="my-profile user-box d-flex flex-row align-items-center w-100 h-100 p-2">
+            <img src="./Sidebar/profilephoto.png" alt="User" class="user-img rounded-2 me-2">
+            <div class="me-2">
+              <span class="fw-semibold">Mathias W.</span><br>
+              <small class="text-muted">Store Manager</small>
+            </div>
+            <button class="btn btn-sm ms-2">
+              <img src="./Navbar/down-arrow.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </nav>
 
-      <!--Conteúdo da página-->    
-      <main class="main-content flex-fill p-4 w-100">
+      <main class="main-content flex-fill p-4 w-100" data-filtered='<!-- cole aqui o conteúdo HTML da nova tabela -->'>
+        <!-- Cabeçalho -->
         <div class="d-flex justify-content-between align-items-center mb-4">
           <input type="text" class="form-control w-50" placeholder="Search Item">
           <div>
             <button class="btn btn-primary me-2">
               <i class="bi bi-box-arrow-up-right"></i> Export
             </button>
-            <button class="btn btn-primary">
+            <button class="btn btn-primary" id="openFilter">
               <i class="bi bi-funnel"></i> Filter
             </button>
           </div>
         </div>
-        <div class="text-center mt-5">
-          <img src="https://cdni.iconscout.com/illustration/premium/thumb/no-data-found-9887663-8026201.png" alt="Not found" class="img-fluid mb-4 empty-img">
-          <p class="fw-semibold">Nothing found.</p>
+
+        <!-- Tela 1: Nada encontrado -->
+        <div id="emptyState">
+          <div class="text-center mt-5">
+            <img src="./images/Nothing-found.svg" alt="Not found" class="img-fluid mb-4 empty-img">
+            <p class="fw-semibold">Nothing found.</p>
+          </div>
         </div>
       </main>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <!-- Modal Overlay + Caixa do Filtro -->
+  <div class="modal-overlay d-none" id="filterModal">
+    <div class="custom-modal filter-modal bg-white p-4 rounded-4 shadow">
+      <h5 class="modal-title mb-3">Filter Request</h5>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Select Store</label>
+        <div class="input-icon position-relative">
+          <select class="form-select">
+            <option selected disabled>Select Store</option>
+            <option>Store A</option>
+            <option>Store B</option>
+          </select>
+          <img src="./Navbar/Down-arrow.svg"
+            class="icon-dropdown position-absolute end-0 top-50 translate-middle-y me-3" alt="dropdown">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Select Item Group</label>
+        <div class="input-icon position-relative">
+          <select class="form-select">
+            <option selected disabled>Item Group</option>
+            <option>Group A</option>
+            <option>Group B</option>
+          </select>
+          <img src="./Navbar/Down-arrow.svg"
+            class="icon-dropdown position-absolute end-0 top-50 translate-middle-y me-3" alt="dropdown">
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label fw-semibold d-block">Select Type</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="itemType" id="item" value="item">
+          <label class="form-check-label" for="item">Item</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="itemType" id="tool" value="tool">
+          <label class="form-check-label" for="tool">Tool</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="itemType" id="assets" value="assets">
+          <label class="form-check-label" for="assets">Assets</label>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-outline-secondary w-50 me-2" id="cancelModal">Cancel</button>
+        <button class="btn btn-primary w-50">Apply</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+  <script>
+    const filterButton = document.querySelector('button.btn-primary:last-of-type');
+    const filterModal = document.getElementById('filterModal');
+    const cancelModal = document.getElementById('cancelModal');
+
+    filterButton.addEventListener('click', () => {
+      filterModal.classList.remove('d-none');
+    });
+
+    cancelModal.addEventListener('click', () => {
+      filterModal.classList.add('d-none');
+    });
+  </script>
+
 </body>
+
 </html>
