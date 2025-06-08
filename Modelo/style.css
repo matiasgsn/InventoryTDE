@@ -181,13 +181,3 @@ body {
   object-fit: cover;
 }
 
-.empty-img {
-  max-width: 260px;
-  height: auto;
-}
-
-.text-center p {
-  font-size: 16px;
-  font-weight: 600;
-  color: #2c3e50;
-}
