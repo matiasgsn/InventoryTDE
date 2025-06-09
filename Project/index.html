@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1440, initial-scale=1.0" />
+  <title>Inventory - Project</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app d-flex mx-auto" style="max-width: 1440px;">
+    <!-- Sidebar -->
+        <aside class="sidebar d-flex flex-column m-3 rounded-4" style="max-width: 232px;">
+        </aside>
+        
+        <aside class="sidebar sidebar-bg d-flex flex-column m-3 rounded-4 position-fixed" style="max-width: 232px;">
+        <div class="logo-section d-flex align-items-center justify-content-center mt-5 ms-3">
+            <img src="../Sidebar/Logo.svg" alt="Inventory Logo" class="logo me-2">
+            <h6 class="brand-title mb-0">Inventory</h6>
+        </div>
+        <nav class="nav flex-column mt-4 px-4">
+            <a class="nav-link" href="#">
+            <img src="../Sidebar/Dashboard.svg" alt="Dashboard Icon" class="dark-500 me-3"> Dashboard
+            </a>
+            <a class="nav-link" href="#">
+            <img src="../Sidebar/Items.svg" alt="Items Icon" class="dark-500 me-3"> Items
+            </a>
+            <a class="nav-link" href="#">
+            <img src="../Sidebar/Tools.svg" alt="Tools Icon" class="dark-500 me-3"> Tools
+            </a>
+            <a class="nav-link" href="#">
+            <img src="../Sidebar/Assets.svg" alt="Assets Icon" class="dark-500 me-3"> Assets
+            </a>
+            <a class="nav-link active" href="#">
+            <img src="../Sidebar/Project.svg" alt="Project Icon" class="dark-500 me-3"> Project
+            </a>
+            <a class="nav-link" href="#">
+            <img src="../Sidebar/Requested & Returned.svg" alt="Requested & Returned Icon" class="dark-500 me-3"> Requested & Returned
+            </a>
+            <a class="nav-link" href="#">
+            <img src="../Sidebar/On hand.svg" alt="On Hand Icon" class="dark-500 me-3"> On hand
+            </a>
+            <a class="nav-link" href="#">
+            <img src="../Sidebar/GRN Report.svg" alt="GRN Report Icon" class="dark-500 me-3"> GRN Report
+            </a>
+        </nav>
+        <div class="flex-grow-1"></div>
+        <div class="theme-toggle d-flex justify-content-center align-items-center mb-4 px-3">
+            <button class="btn body-1-regular white-500 theme-btn-light d-flex justify-content-around w-50 py-3">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 1V2M11 20V21M18.0711 3.92894L17.364 4.63605M4.63605 17.364L3.92894 18.0711M21 11H20M2 11H1M18.071 18.0711L17.3639 17.364M4.63605 4.63605L3.92894 3.92894M17 11C17 14.3137 14.3137 17 11 17C7.68629 17 5 14.3137 5 11C5 7.68629 7.68629 5 11 5C14.3137 5 17 7.68629 17 11Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg> Light
+            </button>
+            <button class="btn body-1-regular dark-500 theme-btn-dark d-flex justify-content-around w-50 py-3">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.67163 12.8687C8.751 12.8687 12.8687 8.751 12.8687 3.67163C12.8687 2.74246 12.7309 1.84548 12.4746 1C16.251 2.14461 19 5.65276 19 9.80298C19 14.8824 14.8824 19 9.80298 19C5.65276 19 2.14461 16.251 1 12.4746C1.84548 12.7309 2.74246 12.8687 3.67163 12.8687Z" stroke="#16151C" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg> Dark
+            </button>
+        </div>
+        </aside>
+
+    <!-- Área principal -->
+    <div class="content d-flex flex-column w-100">
+      <!--Navbar-->
+          <nav class="nav-content d-flex justify-content-between align-items-start p-4 mb-1 w-100">
+              <div class="d-flex flex-column">
+                  <!--Título da Navbar-->
+                   <p class="nav-title header-6-bold dark-500 mb-0">All items</p>
+                   <!--Subtítulo da Navbar-->
+                   <p class="nav-subtitle body-2-regular gray-500 mb-0">Items detail Information</p>
+              </div>
+              <!--Pesquisa, notificação e perfil-->
+              <div class="d-flex align-items-center">
+                      <img src="../Navbar/search.svg" alt="">
+                      <input type="text" class="search-input form-control border border-0 me-3 ms-2" placeholder="Search">
+                      <button class="btn noti-btn">
+                          <img src="../Navbar/notification.svg" alt="">
+                      </button>
+                      <div class="my-profile user-box d-flex flex-row align-items-center w-100 h-100 p-2">
+                          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User" class="user-img rounded-2 me-2">
+                          <div class="me-2">
+                          <span class="fw-semibold">Mathias W.</span><br>
+                          <small class="text-muted">Store Manager</small>
+                          </div>
+                          <button class="btn btn-sm ms-2">
+                              <img src="../Navbar/down-arrow.svg" alt="">
+                          </button>
+                      </div>
+              </div>
+          </nav>
+
+      <!--Conteúdo da página-->    
+      <main class="main-content flex-fill p-4 w-100">
+        <!--Conteúdo vai aqui-->
+        <div class="main-content-container d-flex flex-column justify-content-between h-100">
+            <div class="d-flex justify-content-center align-items-center">
+                <img src="../Navbar/search.svg" alt="">
+                <input type="text" class="search-input form-control border border-0 mx-2 w-25" placeholder="Search">
+                <button class="btn btn-primary position-relative body-1-regular" style="color: #FFFFFF;">
+                    <img class="mx-1" src="images/download.svg"> Export</button>
+            </div>
+
+            <div class="d-flex flex-row flex-wrap justify-content-start align-items-start" style="height: 593px; gap: 31px;">
+                <div class="card" style="width: 326px; height: 177px;">
+                    <div class="p-3">
+                        <div>
+                            <span class="body-2-bold blueblack-100 me-2 align-middle">Project:</span><span class="h5-bold primary-500 align-middle">BDU-DCF</span>
+                        </div>
+                        <div>
+                            <span class="body-2-bold blueblack-100 me-2 align-middle">Client:</span><span class="h5-bold primary-500 ">Bahir Dar University</span>
+                        </div>
+
+                        <div class="d-flex flex-row flex-nowrap overflow-x-auto py-3 gap-2">
+                            <div class="d-flex flex-row">
+                                <img src="https://placehold.co/35x35" class="rounded-circle me-2" style="width: 35px; height: 35px;">
+                                <div class="d-flex flex-column">
+                                    <span class="text-nowrap body-2-bold blueblack-100" style="margin-bottom: -5px;">Letera Tadele</span>
+                                    <span class="text-nowrap label-regular primary-500">Project Manager</span>
+                                </div>
+                            </div>
+
+                            
+                            <div class="d-flex flex-row">
+                                <img src="https://placehold.co/35x35" class="rounded-circle me-2" style="width: 35px; height: 35px;">
+                                <div class="d-flex flex-column">
+                                    <span class="text-nowrap body-2-bold blueblack-100" style="margin-bottom: -5px;">Letera Tadele</span>
+                                    <span class="text-nowrap label-regular primary-500">Project Manager</span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <img src="https://placehold.co/35x35" class="rounded-circle me-2" style="width: 35px; height: 35px;">
+                                <div class="d-flex flex-column">
+                                    <span class="text-nowrap body-2-bold blueblack-100" style="margin-bottom: -5px;">Letera Tadele</span>
+                                    <span class="text-nowrap label-regular primary-500">Project Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="d-flex flex-row flex-nowrap align-items-center gap-4">
+                      <span class="body-2-regular gray-500">Showing</span>
+                      <select class="form-select w-auto">
+                        <option selected>6</option>
+                        <option>12</option>
+                        <option>18</option>
+                      </select>
+                  </div>
+                </div>
+                <div>
+                  Showing 1 to 9 out of 40 records
+                </div>
+                <nav>
+                  <ul class="pagination mb-0">
+                    <li class="page-item disabled">
+                      <a class="page-link">&lt;</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item">
+                      <a class="page-link">&gt;</a>
+                    </li>
+                  </ul>
+                </nav>
+            </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>
