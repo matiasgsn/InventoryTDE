@@ -109,32 +109,33 @@
               <input type="text" class="search-input form-control border border-0 me-3 ms-2" placeholder="Search Items">
             </div>
             
-            <div class="package"><button class="btn" data-bs-toggle="modal" data-bs-target="#packageModal"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1661 3.1442L24.8327 6.22333C25.7932 6.66693 26.5833 7.38289 27.1342 8.26089L22.6833 10.4864L11.3879 4.27392L13.8339 3.1442C15.2129 2.50727 16.7871 2.50727 18.1661 3.1442ZM9.69612 5.05532L7.16726 6.22333C6.20682 6.66693 5.41666 7.38289 4.86578 8.26088L16 13.828L21.0529 11.3016L9.69612 5.05532ZM4.2448 9.62745C4.08492 10.1563 4 10.7152 4 11.2881V20.7116C4 22.9019 5.24125 24.8868 7.16726 25.7764L13.8339 28.8555C14.2894 29.0658 14.7661 29.2067 15.25 29.2781V15.13L4.2448 9.62745ZM16.75 29.2781C17.2339 29.2067 17.7106 29.0658 18.1661 28.8555L21.9167 27.1232V12.5467L16.75 15.13V29.2781ZM23.4167 26.4304L24.8327 25.7764C26.7588 24.8868 28 22.9019 28 20.7116V11.2881C28 10.7152 27.9151 10.1563 27.7552 9.62745L23.4167 11.7967V26.4304Z" fill="#006EC4"/>
-              </svg></button>
+            <div class="d-flex flex-row flex-nowrap align-items-center">
+              <div class="package"><button class="btn" data-bs-toggle="modal" data-bs-target="#packageModal"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1661 3.1442L24.8327 6.22333C25.7932 6.66693 26.5833 7.38289 27.1342 8.26089L22.6833 10.4864L11.3879 4.27392L13.8339 3.1442C15.2129 2.50727 16.7871 2.50727 18.1661 3.1442ZM9.69612 5.05532L7.16726 6.22333C6.20682 6.66693 5.41666 7.38289 4.86578 8.26088L16 13.828L21.0529 11.3016L9.69612 5.05532ZM4.2448 9.62745C4.08492 10.1563 4 10.7152 4 11.2881V20.7116C4 22.9019 5.24125 24.8868 7.16726 25.7764L13.8339 28.8555C14.2894 29.0658 14.7661 29.2067 15.25 29.2781V15.13L4.2448 9.62745ZM16.75 29.2781C17.2339 29.2067 17.7106 29.0658 18.1661 28.8555L21.9167 27.1232V12.5467L16.75 15.13V29.2781ZM23.4167 26.4304L24.8327 25.7764C26.7588 24.8868 28 22.9019 28 20.7116V11.2881C28 10.7152 27.9151 10.1563 27.7552 9.62745L23.4167 11.7967V26.4304Z" fill="#006EC4"/>
+                </svg></button>
+                </div>
+              <div>
+                <button class="btn btn-primary me-2" data-bs-toggle="offcanvas" data-bs-target="#addItemCanvas">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 8V16M16 12H8M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                     Add Item
+                </button>
+                <button class="btn btn-outline-secondary " data-bs-toggle="modal" data-bs-target="#filterModal">
+                  <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.5 6H10.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.5 12H12.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.5 12H21.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.5 6L21.5 6" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5 18H20.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.5 18H6.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="8.5" cy="18" r="2" stroke="#16151C" stroke-width="1.5"/>
+                    <circle cx="17.5" cy="12" r="2" stroke="#16151C" stroke-width="1.5"/>
+                    <circle cx="12.5" cy="6" r="2" stroke="#16151C" stroke-width="1.5"/>
+                    </svg>
+                     Filter
+                </button>
               </div>
-          
-            <div>
-              <button class="btn btn-primary me-2" data-bs-toggle="offcanvas" data-bs-target="#addItemCanvas">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 8V16M16 12H8M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                   Add Item
-              </button>
-              <button class="btn btn-outline-secondary " data-bs-toggle="modal" data-bs-target="#filterModal">
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3.5 6H10.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M3.5 12H12.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M19.5 12H21.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M14.5 6L21.5 6" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M13.5 18H20.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M3.5 18H6.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="8.5" cy="18" r="2" stroke="#16151C" stroke-width="1.5"/>
-                  <circle cx="17.5" cy="12" r="2" stroke="#16151C" stroke-width="1.5"/>
-                  <circle cx="12.5" cy="6" r="2" stroke="#16151C" stroke-width="1.5"/>
-                  </svg>
-                   Filter
-              </button>
             </div>
           </div>
 
