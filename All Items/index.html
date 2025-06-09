@@ -109,7 +109,7 @@
               <input type="text" class="search-input form-control border border-0 me-3 ms-2" placeholder="Search Items">
             </div>
             
-            <div class="package"><button class="btn"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="package"><button class="btn" data-bs-toggle="modal" data-bs-target="#packageModal"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M18.1661 3.1442L24.8327 6.22333C25.7932 6.66693 26.5833 7.38289 27.1342 8.26089L22.6833 10.4864L11.3879 4.27392L13.8339 3.1442C15.2129 2.50727 16.7871 2.50727 18.1661 3.1442ZM9.69612 5.05532L7.16726 6.22333C6.20682 6.66693 5.41666 7.38289 4.86578 8.26088L16 13.828L21.0529 11.3016L9.69612 5.05532ZM4.2448 9.62745C4.08492 10.1563 4 10.7152 4 11.2881V20.7116C4 22.9019 5.24125 24.8868 7.16726 25.7764L13.8339 28.8555C14.2894 29.0658 14.7661 29.2067 15.25 29.2781V15.13L4.2448 9.62745ZM16.75 29.2781C17.2339 29.2067 17.7106 29.0658 18.1661 28.8555L21.9167 27.1232V12.5467L16.75 15.13V29.2781ZM23.4167 26.4304L24.8327 25.7764C26.7588 24.8868 28 22.9019 28 20.7116V11.2881C28 10.7152 27.9151 10.1563 27.7552 9.62745L23.4167 11.7967V26.4304Z" fill="#006EC4"/>
               </svg></button>
               </div>
@@ -277,142 +277,198 @@
         </div>
 
         <!-- Add Item Offcanvas -->
-  <div class="offcanvas offcanvas-end custom-width" tabindex="-1" id="addItemCanvas">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title">Add New Item</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <form>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="groupItem">
-          <label class="form-check-label" for="groupItem">Group Item</label>
+        <div class="offcanvas offcanvas-end custom-width" tabindex="-1" id="addItemCanvas">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Add New Item</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <form>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="groupItem">
+                <label class="form-check-label" for="groupItem">Group Item</label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="consumableItem">
+                <label class="form-check-label" for="consumableItem">Consumable Item</label>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Type *</label>
+                  <select class="form-select">
+                    <option>Choose type</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Item Name *</label>
+                  <input type="text" class="form-control" placeholder="Enter item name">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Image *</label>
+                  <input type="file" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Status *</label>
+                  <select class="form-select">
+                    <option>Choose Status</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Serial Number *</label>
+                  <input type="text" class="form-control" placeholder="Enter serial number">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Item Number *</label>
+                  <input type="text" class="form-control" placeholder="Enter item number">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Unit of Measurement *</label>
+                  <select class="form-select">
+                    <option>Choose unit of Measurement</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Amount *</label>
+                  <input type="text" class="form-control" placeholder="Enter item number">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Price *</label>
+                  <input type="text" class="form-control" placeholder="Enter price">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Date of Purchased *</label>
+                  <input type="date" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Currency *</label>
+                  <select class="form-select">
+                    <option>Choose Currency</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">P1 Document *</label>
+                  <input type="file" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Store *</label>
+                  <select class="form-select">
+                    <option>Choose Store</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Project *</label>
+                  <select class="form-select">
+                    <option>Choose project</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Department *</label>
+                  <select class="form-select">
+                    <option>Choose department</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Category *</label>
+                  <select class="form-select">
+                    <option>Choose category</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Warranty *</label>
+                  <input type="file" class="form-control">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Manufacturer *</label>
+                  <select class="form-select">
+                    <option>Choose manufacturer</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Description *</label>
+                  <textarea class="form-control" placeholder="Input description" rows="3"></textarea>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="fixedAsset">
+                    <label class="form-check-label" for="fixedAsset">Fixed Asset</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4 d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Cancel</button>
+                <button type="submit" class="btn btn-primary">Add</button>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="form-check mb-3">
-          <input class="form-check-input" type="checkbox" id="consumableItem">
-          <label class="form-check-label" for="consumableItem">Consumable Item</label>
-        </div>
 
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label class="form-label">Type *</label>
-            <select class="form-select">
-              <option>Choose type</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Item Name *</label>
-            <input type="text" class="form-control" placeholder="Enter item name">
-          </div>
 
-          <div class="col-md-6">
-            <label class="form-label">Image *</label>
-            <input type="file" class="form-control">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Status *</label>
-            <select class="form-select">
-              <option>Choose Status</option>
-            </select>
-          </div>
-
-          <div class="col-md-6">
-            <label class="form-label">Serial Number *</label>
-            <input type="text" class="form-control" placeholder="Enter serial number">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Item Number *</label>
-            <input type="text" class="form-control" placeholder="Enter item number">
-          </div>
-
-          <div class="col-md-6">
-            <label class="form-label">Unit of Measurement *</label>
-            <select class="form-select">
-              <option>Choose unit of Measurement</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Amount *</label>
-            <input type="text" class="form-control" placeholder="Enter item number">
-          </div>
-
-          <div class="col-md-6">
-            <label class="form-label">Price *</label>
-            <input type="text" class="form-control" placeholder="Enter price">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Date of Purchased *</label>
-            <input type="date" class="form-control">
-          </div>
-
-          <div class="col-md-6">
-            <label class="form-label">Currency *</label>
-            <select class="form-select">
-              <option>Choose Currency</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">P1 Document *</label>
-            <input type="file" class="form-control">
-          </div>
-
-          <div class="col-md-6">
-            <label class="form-label">Store *</label>
-            <select class="form-select">
-              <option>Choose Store</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Project *</label>
-            <select class="form-select">
-              <option>Choose project</option>
-            </select>
-          </div>
-
-          <div class="col-md-6">
-            <label class="form-label">Department *</label>
-            <select class="form-select">
-              <option>Choose department</option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Category *</label>
-            <select class="form-select">
-              <option>Choose category</option>
-            </select>
-          </div>
-
-          <div class="col-md-6">
-            <label class="form-label">Warranty *</label>
-            <input type="file" class="form-control">
-          </div>
-          <div class="col-md-6">
-            <label class="form-label">Manufacturer *</label>
-            <select class="form-select">
-              <option>Choose manufacturer</option>
-            </select>
-          </div>
-
-          <div class="col-12">
-            <label class="form-label">Description *</label>
-            <textarea class="form-control" placeholder="Input description" rows="3"></textarea>
-          </div>
-
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="fixedAsset">
-              <label class="form-check-label" for="fixedAsset">Fixed Asset</label>
+        <!-- Batch Request items -->
+        <div class="modal fade" id="packageModal" tabindex="-1" aria-labelledby="packageModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content p-4 rounded-4">
+              <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold" id="packageModalLabel">Batch Request Items</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row g-3 align-items-end">
+                  <div class="col-md-4">
+                    <label class="form-label">Search <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Store <span class="text-danger">*</span></label>
+                    <select class="form-select">
+                      <option selected disabled>Store</option>
+                      <option>Gypson/floor</option>
+                      <option>HQ</option>
+                      <option>Tafo</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Item category <span class="text-danger">*</span></label>
+                    <select class="form-select">
+                      <option selected disabled>Item group</option>
+                      <option>Group A</option>
+                      <option>Group B</option>
+                    </select>
+                  </div>
+                </div>
+        
+                <div class="text-danger small mt-2">Please select store to proceed</div>
+        
+                <div class="mt-4">
+                  <div class="d-flex justify-content-center flex-wrap gap-2">
+                    <button class="btn btn-outline-primary rounded-pill">Gas kitting</button>
+                    <button class="btn btn-outline-secondary rounded-pill">Condet</button>
+                    <button class="btn btn-outline-secondary rounded-pill">Punta</button>
+                    <button class="btn btn-outline-secondary rounded-pill">Wood punta 8mm</button>
+                    <button class="btn btn-outline-primary rounded-pill">Gypson/floor</button>
+                    <button class="btn btn-outline-secondary rounded-pill">Harry Potter</button>
+                    <!-- Replicar butões para um layout maior -->
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer justify-content-center border-0">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Add Item</button>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="mt-4 d-flex justify-content-between">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Cancel</button>
-          <button type="submit" class="btn btn-primary">Add</button>
-        </div>
-      </form>
-    </div>
-  </div>
 
       </main>
 
