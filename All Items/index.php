@@ -23,19 +23,19 @@
             <h6 class="brand-title mb-0">Inventory</h6>
         </div>
         <nav class="nav flex-column mt-4 px-4">
-            <a class="nav-link" href="../Dashboard/index.html">
+            <a class="nav-link active" href="../Dashboard/index.html">
             <img src="../Sidebar/Dashboard.svg" alt="Dashboard Icon" class="dark-500 me-3"> Dashboard
             </a>
-            <a class="nav-link active" href="../All Items/index.html">
+            <a class="nav-link" href="../All Items/index.php">
             <img src="../Sidebar/Items.svg" alt="Items Icon" class="dark-500 me-3"> Items
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="../Tools/index.html">
             <img src="../Sidebar/Tools.svg" alt="Tools Icon" class="dark-500 me-3"> Tools
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="../Assets/index.html">
             <img src="../Sidebar/Assets.svg" alt="Assets Icon" class="dark-500 me-3"> Assets
             </a>
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="../Project/index.html">
             <img src="../Sidebar/Project.svg" alt="Project Icon" class="dark-500 me-3"> Project
             </a>
             <a class="nav-link" href="#">
