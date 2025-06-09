@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Slabo+27px&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+}
+
+.sidebar {
+  width: 280px;
+  height: 95vh;
+  padding: 0 10px;
+}
+
+.sidebar-bg{
+  background-color: #d6eaff;
+}
+
+.search-svg{
+  margin-left: 10px;
+}
+
+.logo-section{
+  max-width: 123px;
+  max-height: 50px;
+}
+
+.logo-section .logo {
+  max-width: 50px;
+  max-height: 36px;
+}
+
+.brand-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.nav-link {
+  color: #000;
+  font-size: 14px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+.nav-link i {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.nav-link.active {
+  background: rgba(0, 110, 196, 0.05);
+  border-radius: 0px 10px 10px 0px;
+  font-weight: 600;
+
+  color: #006EC4;
+
+  box-shadow: -3px 0px 0px 0px rgba(0,110,196,0.75);
+  -webkit-box-shadow: -3px 0px 0px 0px rgba(0,110,196,0.75);
+  -moz-box-shadow: -3px 0px 0px 0px rgba(0,110,196,0.75);
+
+  /*.body-1-bold{*/
+    font-family: 'Lexend';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  /*}*/
+}
+
+.btn-off{
+  background-color: transparent;
+  border: none;
+}
+
+.theme-btn-light,
+.theme-btn-dark {
+  width: 70px;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.theme-btn-light, 
+.theme-btn-light:hover {
+  background-color: #006EC4;
+  border: none;
+}
+
+.theme-btn-dark, 
+.theme-btn-dark:hover {
+  background-color: transparent;
+  border: none;
+}
+
+.header-6-bold{
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.body-1-regular{
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.body-2-regular{
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.body-1-bold{
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.white-500, .white-500:hover{
+  color: #FFFFFF;
+}
+
+
+.dark-500, .dark-500:hover{
+  color: #16151C;
+}
+
+.gray-500, .gray-500:hover{
+  color: #A2A1A8;
+}
+
+
+/*Other*/
+.nav-content {
+  background-color: #fff;
+  width: calc(100% - 260px);
+  padding: 40px;
+  font-size: 14px;
+}
+
+.nav-content h4 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.btn.btn-primary {
+  background-color: #007bff;
+  border: none;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn-primary i {
+  margin-right: 6px;
+}
+
+.search-input::placeholder{
+  color: rgba(22, 21, 28, 0.2);
+}
+
+.noti-btn{
+  padding: 13px;
+}
+
+.my-profile{
+  width: 184px;
+  height: 50px;
+
+}
+
+.user-box > .user-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.checklist-disabled{
+    box-sizing: border-box;
+
+    width: 16px;
+    height: 16px;
+}
+
+.greyscale-400{
+    border: 1px solid #CBD5E0;
+    border-radius: 6px;
+}
+
+.greyscale-600{
+    color: #687588 !important;
+}
+
+.greyscale-900{
+    color: #111827 !important;
+}
+
+.secondary-500{
+    background: #FEB000;
+}
+
+.greyscale-50-all{
+    background: #FAFAFA;
+}
+
+.thead-bg{
+    background-color: rgb(243, 242, 242);
+}
+
+.table-body-small-bold{
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 160%;
+    
+    letter-spacing: 0.2px;
+}
+
+.table-body-small-medium{
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.action-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    width: 30px;
+    height: 30px;
+}
+
+.Image-action{
+  display: flex;
+  align-items: center;
+  
+}
+
+#filterModal .modal-dialog {
+  max-width: 350px;
+  margin: auto;
+}
+
+#filterModal .modal-content {
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+#filterModal .form-check {
+  margin-bottom: 0.5rem;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+.offcanvas-end.custom-width {
+  width: 50vw !important;
+}
+.modal-backdrop.show {
+  opacity: 0.5;
+  backdrop-filter: blur(4px);
+}
