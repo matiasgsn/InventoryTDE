@@ -102,7 +102,7 @@
         <!--Conteúdo vai aqui-->
 
         <!--pesquisa, add e filtro de itens-->
-        <div class="container  border rounded p-4">
+        <div class="container border rounded p-4">
           <div class="d-flex justify-content-between align-items-center mb-3">
             <div class="d-flex align-items-center border rounded">
               <img class="search-svg" src="../Navbar/search.svg" alt="">
@@ -121,7 +121,7 @@
                     </svg>
                      Add Item
                 </button>
-                <button class="btn btn-outline-secondary " data-bs-toggle="modal" data-bs-target="#filterModal">
+                <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#filterModal">
                   <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3.5 6H10.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M3.5 12H12.5" stroke="#16151C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -172,30 +172,35 @@
                       </tr>
                     </thead>
                     <tbody class="table-body-small-medium" style="border-color: transparent;">
-                        <tr class="table-row">
-                          <td class="py-3 align-middle greyscale-900" style="max-width: 3%; border-radius: 1em 0 0 1em; padding-left: 1.5em;">
-                              <input class="form-check-input checklist-disabled" type="checkbox" value="" id="checkDefault">
-                          </td>
-                          <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 12%;">
-                              Gas Kitting
-                          </td>
-                          <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">
-                            <img style="max-width: 57px; max-height: 57px;" src="../Table/images/placeholder.png" alt="">
-                          </td>
-                          <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">G-7873</td>
-                          <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">IE Project Items</td>
-                          <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">22 Store House</td>
-                          <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">1 pcs</td>
-                          <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">HQ</td>
-                          <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%">Activated</td>
-                          <td class="py-3 align-middle greyscale-900 text-end" scope="col" style="max-width: 11%; border-radius: 0 1em 1em 0; padding-left: 1.5em;">
+                        <?php 
+                          include "../Backend/config.php";
+                          $sql = "SELECT * FROM items";
+                          $query = $mysqli -> query($sql);
+                          while($dados = $query -> fetch_array()){
+                          ?><tr class="table-row">
+                              <td class="py-3 align-middle greyscale-900" style="max-width: 3%; border-radius: 1em 0 0 1em; padding-left: 1.5em;">
+                                  <input class="form-check-input checklist-disabled" type="checkbox" value="" id="checkDefault">
+                              </td>
+                              <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 12%;">
+                                  <?php echo $dados['name']?>
+                              </td>
+                              <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%">
+                                <img style="max-width: 57px; max-height: 57px;" src="<?php echo $dados['image']?>" alt="">
+                              </td>
+                              <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%"><?php echo $dados['model'];?></td>
+                            <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%"><?php echo $dados['type'];?></td>
+                            <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%"><?php echo $dados['store'];?></td>
+                            <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%"><?php echo $dados['amount'];?></td>
+                            <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 10%"><?php echo $dados['project'];?></td>
+                            <td class="py-3 align-middle greyscale-900 text-start" scope="col" style="max-width: 11%"><?php echo $dados['account'];?></td>
+                            <td class="py-3 align-middle greyscale-900 text-end" scope="col" style="max-width: 11%; border-radius: 0 1em 1em 0; padding-left: 1.5em;">
                               <div class="d-flex flex-row justify-content-evenly">
-                                <button class="btn btn-warning action-btn"><img class="Image-action" src="../Table/images/eye.svg" width="16px" height="16px"></button>
-                                <button class="btn btn-primary action-btn"><img class="Image-action" src="../Table/images/edit.svg" width="16px" height="16px"></button>
-                                <button class="btn btn-danger action-btn"><img class="Image-action" src="../Table/images/trash.svg" width="16px" height="16px"></button>
+                                <a class="btn btn-warning action-btn"><img class="Image-action" src="../Table/images/eye.svg" width="16px" height="16px"></a>
+                                <a class="btn btn-primary action-btn"><img class="Image-action" src="../Table/images/edit.svg" width="16px" height="16px"></a>
+                                <a href="../Backend/deletarItem.php?id=<?php echo $dados['id'];?>" class="btn btn-danger action-btn"><img class="Image-action" src="../Table/images/trash.svg" width="16px" height="16px"></a>
                               </div>
-                          </td>
-                        </tr>
+                            </td>
+                            </tr><?php } ?>
                       </tbody>
                   </table>
             </form>
@@ -234,12 +239,60 @@
         </div>
         </div>
 
+        <!-- DEV: Modal de adicionar item -->
+         <div class="modal fade" id="devAddModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="filterModalLabel">Add item</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <form action="../Backend/salvarItem.php" method="post">
+                <div class="modal-body">
+                  <label for="add_name" class="form-label">Name</label>
+                  <input type="text" name="add_name" required class="form-control" id="inputName">
+
+                  <label for="add_image" class="form-label">Image (Link)</label>
+                  <input type="text" name="add_image" required class="form-control" id="inputLink">
+
+                  <label for="add_model" class="form-label">Model</label>
+                  <input type="text" name="add_model" required class="form-control" id="inputModel">
+                  
+                  <label for="add_type" class="form-label">Type</label>
+                  <input type="text" name="add_type" required class="form-control" id="inputType">
+
+                  <label for="add_store" class="form-label">Store</label>
+                  <input type="text" name="add_store" required class="form-control" id="inputStore">
+
+                  <label for="add_amount" class="form-label">Ammount</label>
+                  <input type="number" name="add_amount" required class="form-control" id="inputAmmount">
+
+                  <label for="add_project" class="form-label">Project</label>
+                  <select name="add_project" required class="form-control">
+                    <option>HQ</option>
+                  </select>
+
+                  <label for="add_account" class="form-label">Account</label>
+                  <select name="add_account" required class="form-control">
+                    <option>Activated</option>
+                  </select>
+
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Save</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
          <!-- Filter Modal -->
          <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="filterModalLabel">Filter</h5>
+                <h5 class="modal-title" id="filterModalLabel">Add item</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -416,6 +469,12 @@
                 <button type="submit" class="btn btn-primary">Add</button>
               </div>
             </form>
+            <button class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#devAddModal">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 8V16M16 12H8M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                     [DEV] Add Item
+                </button>
           </div>
         </div>
 
